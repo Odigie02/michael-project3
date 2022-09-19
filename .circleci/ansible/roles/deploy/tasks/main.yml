@@ -42,9 +42,11 @@
 
 - name: Extract zipped file
   unarchive: 
-    src: "files/artifact.tar.gz"
-    dest: "~/"
-
+    # src: "files/artifact.tar.gz"
+    # dest: "~/"
+    src: ~/project/artifact.tar.gz
+    dest: /home/ubuntu
+    
 - name: start app
   become: yes
   shell: |
